@@ -1,0 +1,24 @@
+.text-small {
+    font-size: 0.9rem;
+}
+
+.links{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.links:hover,
+.links:focus {
+    text-decoration: none;
+}
+
+footer {
+    background: #212529;
+    width: 100%;
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
