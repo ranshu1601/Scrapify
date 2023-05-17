@@ -2,16 +2,16 @@ import React from 'react'
 
 function Cards({data}) {
     return (
-        <div className='py-2 px-3'>
+        <div className='px-3'>
             {data.map((item, i) => {
                 return (
-                    <div className="card py-2 my-4 ">
-                        <img src={item.img} className="card-img-top rounded img-thumbnail img-center mx-auto" alt="..." style={{height:'100px' , width:'100px'}} />
+                    <div className="bg-light py-2 my-4 d-flex flex-column justify-content-evenly px-4 rounded-pill " style={{height:'300px'}}>
+                        <img src={item.img} className=" rounded img-thumbnail img-center mx-auto " alt="..." style={{height:'80px' , width:'100px'}} />
 
-                        <div className="card-body">
-                            <h5 className="card-title">{item.details}</h5>
-                            <p className="card-text">Price : {item.price}</p>
-                            <a href={item.link} className="btn btn-primary" target={'_blank'}>Go somewhere</a>
+                        <div className="">
+                            <h6 className="">{item.details}</h6>
+                            <h5 className="">Price : {item.price}</h5>
+                            <a href={item.link} className="btn btn-secondary" target={'_blank'}>Buy Now</a>
                         </div>
                     </div>
                 )

@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './css/Footer.css'
+import { Link } from 'react-router-dom'
+
 function Footer() {
     return (
         <div className="d-flex flex-column h-100 ">
@@ -14,8 +17,8 @@ function Footer() {
                         <div className="col-lg-6 col-md-6">
                             <h5 className="text-white mb-3">Quick links</h5>
                             <ul className="list-unstyled text-muted">
-                                <li><a href="#" className='links'>Home</a></li>
-                                <li><a href="#" className='links'>About</a></li>
+                                <li><Link to="/" className='links'>Home</Link></li>
+                                <li><Link to="/about" className='links'>About</Link></li>
                             </ul>
                         </div>
                     </div>

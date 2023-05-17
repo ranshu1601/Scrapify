@@ -36,9 +36,9 @@ function Result({product,amazonData,flipkartData}) {
     // ]
     return (
         <div>
-            <p className='fs-4 px-5 py-3' >Showing results for {product}</p>
+            <p className='fs-4 px-5 pt-4' >Showing results for {product}</p>
             <div className="container text-center">
-                <div className="row">
+                <div className="row align-items-center justify-items-center">
                     <div className="col">
                         {amazonData && (<Cards data={amazonData}/>)}
                         
@@ -47,6 +47,7 @@ function Result({product,amazonData,flipkartData}) {
                         {flipkartData && (<Cards data={flipkartData} />)}
                         
                     </div>
+                    
                     {/* <div className="col">
                         <Cards data={data} />
                     </div> */}

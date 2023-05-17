@@ -16,6 +16,8 @@
 footer {
     background: #212529;
     width: 100%;
+    position: relative;
+    top: 4.4vh;
 }
 body,
 html {

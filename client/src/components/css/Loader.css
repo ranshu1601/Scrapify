@@ -1,0 +1,13 @@
+.load::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.377);
+    height: 109vh;
+    width: 98.9vw;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.front{
+    z-index: 5;
+}

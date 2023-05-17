@@ -2,9 +2,9 @@
 import React, { useState } from 'react'
 import { ImSearch } from 'react-icons/im'
 import './css/Navbar.css'
-import { Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Navbar({ setProduct }) {
+function Navbar({ setProduct, setAmazonData, setFlipkartData }) {
   const [query, setQuery] = useState("");
 
   document.addEventListener('keydown', (e) => {
@@ -14,6 +14,8 @@ function Navbar({ setProduct }) {
 
   const handleSearchClick = () => {
     if (query !== "") {
+      setAmazonData(null);
+      setFlipkartData(null);
       setProduct(query);
     };
   }
@@ -24,9 +26,9 @@ function Navbar({ setProduct }) {
           <a className="navbar-brand font1 fs-2 text">Scrapify</a>
           <form className="d-flex" role="search" action='search'>
             <input className="form-control me-2 rounded-5 py-2" type="search" placeholder="enter product name ..." aria-label="enter product name ..." onChange={(e) => setQuery(e.currentTarget.value)} />
-            <Navigate to='/search' className='text-decoration-none'>
+            <Link to='/search' className='text-decoration-none'>
               <button className="btn bg-transparent p-0" type="submit" onClick={handleSearchClick} ><ImSearch /></button>
-            </Navigate>
+            </Link>
           </form>
         </div>
       </nav>
